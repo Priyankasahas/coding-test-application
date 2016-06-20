@@ -78,7 +78,7 @@ RSpec.describe Response do
     subject { Response.hashed_responses_per_rating_question(responses) }
 
     it 'should return hash of responses per rating question' do
-      expect(subject[1]).to eq([5,4])
+      expect(subject[1]).to eq([5, 4])
     end
   end
 end
