@@ -7,6 +7,6 @@ require 'application'
 app = Application.new
 survey_file = app.survey_file_name
 response_file = app.response_file_name
-puts "Processing you survey file: #{survey_file} with responses from
+puts "Processing your survey file: #{survey_file} with responses from
       #{response_file}"
 app.process_survey(survey_file, response_file)

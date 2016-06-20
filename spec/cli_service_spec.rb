@@ -15,7 +15,7 @@ RSpec.describe CliService do
       let(:message) { 'Enter text:' }
 
       it 'should ask for an input' do
-        expect(highline_instance).to receive(:ask).with(message)
+        expect(highline_instance).to receive(:ask).with("\e[32mEnter text:\e[0m")
         subject
       end
     end

@@ -36,6 +36,7 @@ PLATFORMS
 
 DEPENDENCIES
   highline
+  rainbow
   rspec
   rubocop
 

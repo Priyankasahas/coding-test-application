@@ -12,7 +12,7 @@ RSpec.describe Application do
 
   context '.survey_file_name' do
     context 'given a valid file name' do
-      let(:file_name) { 'survey-1.csv' }      
+      let(:file_name) { 'survey-1.csv' }
 
       it 'should return the file name' do
         expect(cli_service).to receive(:get_input) { file_name }
@@ -22,6 +22,26 @@ RSpec.describe Application do
 
     context 'given an invalid file name' do
       let(:file_name) { 'survey.csv' }
+
+      it 'should return the file name' do
+        expect(cli_service).to receive(:get_input).exactly(4).times { file_name }
+        expect(subject).to eq file_name
+      end
+    end
+  end
+
+  context '.response_file_name' do
+    context 'given a valid file name' do
+      let(:file_name) { 'survey-1-responses.csv' }
+
+      it 'should return the file name' do
+        expect(cli_service).to receive(:get_input) { file_name }
+        expect(subject).to eq file_name
+      end
+    end
+
+    context 'given an invalid file name' do
+      let(:file_name) { 'response.csv' }
 
       it 'should return the file name' do
         expect(cli_service).to receive(:get_input).exactly(4).times { file_name }

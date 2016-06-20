@@ -1,4 +1,5 @@
 require 'highline'
+require 'rainbow'
 
 class CliService
   def initialize
@@ -6,6 +7,6 @@ class CliService
   end
 
   def get_input(message)
-    @service.ask message
+    @service.ask Rainbow(message).green
   end
 end
