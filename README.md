@@ -63,17 +63,28 @@ You will be asked to enter a survey file name from the list of files provided. N
 This initiates the application and processes the files to display the above mentioned results.
 
 Here I have tried to focus on classes to have a single responsibility.
+
 Application - responsible for intaking files and pass them on to processing service.
+
 ProcessingService - responsible for importing/processing files and displaying results.
+
 Response & Question - act as models that support the processing service.
+
 CliService - This is an example of wrapper class for an external cli service.
 
+
 My thoughts around structure:
+
 Survey has_many Questions
+
 Question has_many Responses
 
+
 Question belongs_to Survey
+
 Response belongs_to Question and Survey
 
+
 Use `rspec` to run the tests
+
 Use `rubocop` to check if the code aligns with Ruby best practices
