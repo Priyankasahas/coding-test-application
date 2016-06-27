@@ -8,9 +8,9 @@ RSpec.describe Application do
     allow(cli_service_class).to receive(:new) { cli_service }
   end
 
-  subject { Application.new.survey_file_name }
-
   context '.survey_file_name' do
+    subject { Application.new.survey_file_name }
+
     context 'given a valid file name' do
       let(:file_name) { 'survey-1.csv' }
 
@@ -31,6 +31,8 @@ RSpec.describe Application do
   end
 
   context '.response_file_name' do
+    subject { Application.new.response_file_name }
+
     context 'given a valid file name' do
       let(:file_name) { 'survey-1-responses.csv' }
 
